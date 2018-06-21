@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>CSS</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    h1 {
+      color: red;
+      font-size: 60px;
+      font-weight: normal;
+      text-decoration: line-through;
+      text-transform: uppercase;
+      border: 3px double pink;
+      text-align: center;
+      font-style: inherit;
+    }
+    .hover-example{
+      background-color: green;
+      color:white;
+      width: 100px;
+      height:100px;
+    }
+    .hover-example:hover{
+      background-color: red;
+      color:white;
+      width: 150px;
+      height:150px;
+    }
+    /* nerver use id and !important */
+
+    /* the specifity: id(100) > class(10) > tag(1) */
+    p::before {
+      content: "hi, ";
+    }
+    .block-dis {
+      display: block;
+      border: 3px solid black;
+    }
+    .inline-dis {
+      display: inline;
+      border: 3px solid black;
+    }
+    /* by default <span> is inline <div> and <p> is block */
+    /* block and inline-block can manipulate padding margin height and width */
+    .example-outside {
+      background-color: greenyellow;
+    }
+    
+    .example {
+      background-color: white;
+      border: 2px solid red;
+      margin: 25px;
+      padding: 5px;
+    }
+
+    .apply-float div {
+      float: left;
+    }
+
+    .box-1 {
+      background-color: blue;
+      border: 3px solid black;
+      text-align: center;
+      color: white;
+      height:50px;
+      width:100px;
+    }
+    .box-2 {
+      background-color: red;
+      border: 3px solid black;
+      text-align: center;
+      color: white;
+      height:50px;
+      width:100px;
+    }
+    .box-3 {
+      background-color: green;
+      border: 3px solid black;
+      text-align: center;
+      color: white;
+      height:100px;
+      width:50px;
+    }
+
+    .apply-flex {
+      display:flex;
+      width:100%;
+      border: 1px solid black;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+    .apply-flex-2 {
+      display:flex;
+      width:100%;
+      border: 1px solid black;
+      justify-content: space-around;
+      flex-direction: column;
+      align-items: stretch;
+      height:200px;
+    }
+    .no-height {
+      height: inherit;
+    }
+
+
+  </style>
+</head>
+<body>
+  <h1>This is a title</h1>
+  <div class="hover-example">Hover your mouse over me</div>
+  <div class="block-dis">block display</div>
+  <p>this is a p tag</p>
+  <div class="inline-dis">display inline</div>
+  <div class="inline-dis">display inline</div>
+  <div class="example-outside">
+    <div class="example">Interior Content</div>
+  </div>
+  <div class="apply-float">
+    <div class="box-1">1</div>
+    <div class="box-2">2</div>
+    <div class="box-3">3</div>
+  </div>
+  <div class="apply-flex">
+    <div class="box-1">1</div>
+    <div class="box-2">2</div>
+    <div class="box-3">3</div>
+  </div>
+  <div class="apply-flex-2">
+    <div class="box-1 no-height">1</div>
+    <div class="box-2 no-height">2</div>
+    <div class="box-3 no-height">3</div>
+  </div>
+</body>
+</html>
